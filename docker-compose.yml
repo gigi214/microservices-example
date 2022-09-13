@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  bash-exec:
+    build:
+      context: bash_exec
+      dockerfile: Dockerfile
+    container_name: bash-exec
+    ports:
+      - '8801:8081'
+    restart: unless-stopped
+    links:
+      - 'store-cmds:store-cmds'
+    depends_on:
+      - store-cmds
+
+  store-cmds:
+    build:
+      context: store_cmds
+      dockerfile: Dockerfile
+    container_name: store-cmds
+    ports:
+      - '8800:8081'
+    restart: unless-stopped
