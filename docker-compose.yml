@@ -12,7 +12,7 @@ services:
       - 'store-cmds:store-cmds'
     depends_on:
       - store-cmds
-
+      
   store-cmds:
     build:
       context: store_cmds
