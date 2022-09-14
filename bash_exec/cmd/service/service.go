@@ -38,7 +38,7 @@ var httpAddr = fs.String("http-addr", ":8081", "HTTP listen address")
 var zipkinURL = fs.String("zipkin-url", "", "Enable Zipkin tracing via a collector URL e.g. http://localhost:9411/api/v1/spans")
 var lightstepToken = fs.String("lightstep-token", "", "Enable LightStep tracing via a LightStep access token")
 var appdashAddr = fs.String("appdash-addr", "", "Enable Appdash tracing via an Appdash server host:port")
-var storeServiceAddr = fs.String("store-service-addr", "store-cmds:8800", "Address of the microservice that expose database functions")
+var storeServiceAddr = fs.String("store-service-addr", "store-cmds:8081", "Address of the microservice that expose database functions")
 
 // var grpcAddr = fs.String("grpc-addr", ":8082", "gRPC listen address")
 // var thriftAddr = fs.String("thrift-addr", ":8083", "Thrift listen address")
